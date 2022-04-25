@@ -48,4 +48,15 @@ fn main() {
         digit == 0 // return bool
     }
 
+    let arr2 = [0, 1, 2, 3, 4, 5, 6, 7];
+    let slice = &arr2[0 .. 5]; // [1,2] don't know the length
+    
+    borrowing_slice(arr2, slice);
+}
+
+fn borrowing_slice(arr: [u8; 8], slice: &[u8]) {
+    println!(" {:?} ", arr);
+    println!(" {:?} ", slice);
+    println!("length: {}", slice.len());
+    println!("{} {}", slice[0], slice[1]);
 }
