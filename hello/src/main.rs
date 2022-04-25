@@ -31,4 +31,21 @@ fn main() {
     // print the whole array 
     println!(" {:?} ", other_arr);
 
+    let tuple: (u8, bool, f32) = (50, true, 39.5);
+    let tuple2 = (3, 5);
+
+    println!("first {} second {} third {} ", tuple.0, tuple.1, tuple.2);
+    println!(" {:?} ", tuple2);
+
+    let (a, b, c) = tuple;
+
+    // Destructuring
+    println!("first {} second {} third {}", a, b, c);
+
+    println!("{}", is_even(89));
+    pub fn is_even(num: u8) -> bool {
+        let digit: u8 = num % 2;
+        digit == 0 // return bool
+    }
+
 }
