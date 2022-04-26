@@ -85,10 +85,25 @@ fn main() {
 
     // While loop iteration
     let mut i = 0;
-    while i < 3 {
-        println!("While Loop");
+    while i < 5 {
+        // println!("While Loop");
         println!("{}", i);
         i += 1;
+        if i == 3 {
+            println!("exit");
+            break
+        }
+    }
+
+    // match 
+    let x = 1;
+
+    match x {
+        0 => println!("zero"),
+        1 | 2 => println!("1,2"),
+        3..=4 => println!("3,4"),
+        5 => println!("five"),
+        _ => println!("Default, something else"),
     }
 }
 
