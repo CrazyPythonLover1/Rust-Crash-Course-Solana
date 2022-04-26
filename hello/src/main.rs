@@ -52,6 +52,23 @@ fn main() {
     let slice = &arr2[0 .. 5]; // [1,2] don't know the length
     
     borrowing_slice(arr2, slice);
+
+    // String Data type 
+    let text: &str = "Blockchain Developer";
+    let mut string: String = String::from("Blockchain Developer");
+
+    let slice = &string[.. 5];
+    println!("slice: {}", slice);
+    println!("slice len: {}", slice.len());
+
+    string.push('1');
+    string.push_str("! Bob");
+
+    string = string.replace("Blockchain", "Software");
+
+    println!("{}", string);
+
+    
 }
 
 fn borrowing_slice(arr: [u8; 8], slice: &[u8]) {
