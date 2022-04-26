@@ -68,7 +68,15 @@ fn main() {
 
     println!("{}", string);
 
-    
+    // If else statement 
+    let n = 0;
+    if n > 0 {
+        println!("Greater than 0");
+    } else if n < 0 {
+        println!("Less than 0");
+    } else {
+        println!("is 0")
+    }
 }
 
 fn borrowing_slice(arr: [u8; 8], slice: &[u8]) {
