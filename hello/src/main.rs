@@ -77,6 +77,19 @@ fn main() {
     } else {
         println!("is 0")
     }
+
+    // For loop iteration
+    for i in 0..11 {
+        println!("{}", i);
+    }
+
+    // While loop iteration
+    let mut i = 0;
+    while i < 3 {
+        println!("While Loop");
+        println!("{}", i);
+        i += 1;
+    }
 }
 
 fn borrowing_slice(arr: [u8; 8], slice: &[u8]) {
