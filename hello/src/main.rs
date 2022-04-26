@@ -105,6 +105,28 @@ fn main() {
         5 => println!("five"),
         _ => println!("Default, something else"),
     }
+
+    // use of struct 
+    let name = String::from("bird");
+    let bird = Bird {name, attack: 5};
+    bird.print_name();
+    bird.print_attack();
+}
+
+// Struct types
+struct Bird {
+    name: String,
+    attack: u64
+}
+
+impl Bird {
+    fn print_name(&self) {
+        println!("{}", self.name)
+    }
+
+    fn print_attack(&self) {
+        println!("{}", self.attack)
+    }
 }
 
 fn borrowing_slice(arr: [u8; 8], slice: &[u8]) {
