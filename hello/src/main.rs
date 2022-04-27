@@ -111,6 +111,7 @@ fn main() {
     let bird = Bird {name, attack: 5};
     bird.print_name();
     bird.print_attack();
+    println!(" {} {} ", bird.can_fly(), bird.is_animal());
 }
 
 // Struct types
@@ -126,6 +127,24 @@ impl Bird {
 
     fn print_attack(&self) {
         println!("{}", self.attack)
+    }
+}
+
+// trait
+
+impl Animal for Bird {
+    fn can_fly(&self) -> bool {
+     true   
+    }
+    fn is_animal(&self) -> bool {
+        false
+    }
+}
+
+trait Animal {
+    fn can_fly(&self) -> bool;
+    fn is_animal(&self) -> bool {
+        true
     }
 }
 
